@@ -33,5 +33,37 @@ function menorEMaiorAltura() {
             Menor altura: ${menorAltura}
             Maior altura: ${maiorAltura}
         `)
-
 } 
+
+function mediaAritmetica() {
+    let soma = 0;
+    let positivos = 0;
+    let negativos = 0;
+    let quantidadeValores = 0;
+    let valor = 10;
+        
+    while (valor > -8) {
+        soma += valor;
+        quantidadeValores++
+       
+        if (valor > 0) {
+            positivos++
+        } else {
+            negativos++
+        }
+        valor -= 1; //Fator que faz ele virar negativo ao final da interação
+    }
+
+    const media = soma / quantidadeValores;
+    const percentualPositivos = (positivos * 100) / quantidadeValores;
+    const percentualNegativos = negativos / quantidadeValores * 100;
+
+    alert(`
+        Quantidade: ${quantidadeValores}
+        Positivos: ${positivos}
+        Negativos: ${negativos}
+        Soma: ${soma}
+        Percentual de Positivos: ${percentualPositivos.toFixed(2)}%
+        Percentual de Negativos: ${percentualNegativos.toFixed(2)}%
+    `)
+}
