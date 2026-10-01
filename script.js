@@ -11,5 +11,27 @@ function somaImpares() {
 }
 
 function menorEMaiorAltura() {
-        
-}
+        const quantidadedealturas = 15;
+        let alturas = [ 1.70, 1.65, 1.80, 1.55, 1.90, 1.75, 1.60, 1.85, 1.95, 1.50, 1.72, 1.68, 1.78, 1.82, 1.88];
+
+        let menorAltura = alturas[0];
+        let maiorAltura = alturas[0];
+
+        for (let altura of alturas) {
+            if (altura < menorAltura) {
+                menorAltura = altura;
+            }
+            if (altura > maiorAltura) {
+                maiorAltura = altura    ;
+            }
+        }
+
+        console.log("Menor altura: " + menorAltura);
+        console.log("Maior altura: " + maiorAltura);
+        alert(`
+            Quantidade de alturas percorridas: ${quantidadedealturas}
+            Menor altura: ${menorAltura}
+            Maior altura: ${maiorAltura}
+        `)
+
+} 
